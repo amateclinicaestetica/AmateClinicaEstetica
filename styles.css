@@ -397,6 +397,32 @@ footer {
     border: 0;
 }
 
+/* Reseñas de Google */
+.review-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
+    border-top: 4px solid var(--primary-color);
+}
+
+.review-stars {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.review-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
 /* Responsivo para móviles */
 @media (max-width: 768px) {
     .hero {
