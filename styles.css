@@ -234,13 +234,17 @@ h1, h2, h3 {
     gap: 15px;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: var(--font-body);
     background-color: #fcfcfc;
+}
+
+textarea {
+    resize: vertical;
 }
 
 .center-btn {
