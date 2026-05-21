@@ -376,6 +376,27 @@ footer {
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
+/* Mapa Responsivo */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%; /* Relación de aspecto para el contenedor */
+    position: relative;
+    height: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
 /* Responsivo para móviles */
 @media (max-width: 768px) {
     .hero {
