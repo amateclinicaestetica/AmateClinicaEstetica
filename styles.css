@@ -1,0 +1,391 @@
+/* Variables de color basadas en la imagen */
+:root {
+    --primary-color: #d17a7a; /* Rosa fuerte de los botones */
+    --secondary-color: #f7f1f0; /* Fondo beige claro */
+    --text-dark: #4a3c3c;
+    --text-light: #7a6a6a;
+    --white: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+    /* Aquí podrías agregar una imagen de fondo con ondas muy sutiles si la tienes */
+    background-image: linear-gradient(135deg, #fdfbfb 0%, #f3eceb 100%);
+    line-height: 1.6;
+}
+
+/* Tipografía de títulos */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #b86666;
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    min-height: 70vh;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content em {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Secciones Generales */
+.section-container {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before, .section-title::after {
+    content: "•";
+    color: var(--primary-color);
+    margin: 0 15px;
+    opacity: 0.5;
+}
+
+/* Grids */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.team-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tarjetas (Cards) */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Formulario */
+.reserva-section {
+    padding: 60px 10%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reserva-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    background-color: #fcfcfc;
+}
+
+.center-btn {
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--white);
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* --- Comparador Antes y Después (Galería) --- */
+.gallery-case {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-case h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.case-description {
+    margin-top: 20px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.case-description p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.case-description p:last-child {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.before-after-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    /* La proporción 4/3 suele ir bien, ajústala a 1/1 (cuadrado) si tus fotos son de Instagram */
+    aspect-ratio: 4/3; 
+    background-color: var(--secondary-color);
+}
+
+.before-after-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img-before-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Estado inicial al 50% */
+    height: 100%;
+    overflow: hidden; /* Esto es clave para "recortar" la imagen del antes */
+}
+
+/* El input es invisible pero toma los clics del usuario */
+.slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize; /* Cursor de flechas hacia los lados */
+    z-index: 10;
+}
+
+/* La barra y botón visual que simulan el deslizador */
+.slider-thumb {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Estado inicial al 50% */
+    width: 4px;
+    height: 100%;
+    background: var(--white);
+    pointer-events: none; /* Ignora clics para que actúe el input invisible */
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.slider-thumb::after {
+    content: "↔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .row {
+        grid-template-columns: 1fr;
+    }
+    .navbar ul {
+        display: none; /* Aquí agregarías un menú hamburguesa con JS en el futuro */
+    }
+}

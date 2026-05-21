@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Estética</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes de Google: Playfair Display para títulos, Montserrat para texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="amate.png" alt="Clínica Estética Áma Te">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#tratamientos">Tratamientos</a></li>
+                <li><a href="#equipo">Nuestro Equipo</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="#reserva" class="btn-primary">Reservar Cita</a>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Resalta tu<br><em>belleza natural</em></h1>
+            <p>Tratamientos avanzados para el cuidado de tu piel.</p>
+            <div class="hero-buttons">
+                <a href="#reserva" class="btn-primary">Reservar Cita</a>
+                <a href="#tratamientos" class="btn-secondary">Ver Tratamientos</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Cuidado_de_la_piel.jpg" alt="Cuidado de la piel">
+        </div>
+    </section>
+
+    <!-- Sección Tratamientos -->
+    <section id="tratamientos" class="section-container">
+        <h2 class="section-title">Nuestros Tratamientos</h2>
+        <div class="grid-3">
+            <div class="card">
+                <img src="Limpieza_facial.jpeg" alt="Limpieza Facial">
+                <h3>Limpieza Facial</h3>
+                <p>Renueva tu piel</p>
+                <a href="#" class="btn-outline">Más Información</a>
+            </div>
+            <div class="card">
+                <img src="relleno_de_labios.jfif" alt="Relleno de Labios">
+                <h3>Relleno de Labios</h3>
+                <p>Labios más voluminosos</p>
+                <a href="#" class="btn-outline">Más Información</a>
+            </div>
+            <div class="card">
+                <img src="depilación_laser.jfif" alt="Depilación Láser">
+                <h3>Depilación Láser</h3>
+                <p>Depilación definitiva</p>
+                <a href="#" class="btn-outline">Más Información</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="section-container">
+        <h2 class="section-title">Resultados Reales</h2>
+        <p class="text-center">Desliza la barra para ver el antes y el después de nuestros pacientes.</p>
+        
+        <div class="gallery-case">
+            <h3>Primera sesión de depilación láser</h3>
+            <div class="before-after-container">
+                <!-- La imagen del "después" va en el fondo -->
+                <img class="img-after" src="despues_capilar.jpg" alt="Después del tratamiento">
+                <div class="img-before-wrapper">
+                    <!-- La imagen del "antes" va superpuesta -->
+                    <img class="img-before" src="antes_capilar.jpg" alt="Antes del tratamiento">
+                </div>
+                <!-- El input invisible que controla el deslizador -->
+                <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Deslizar para comparar antes y después">
+                <div class="slider-thumb"></div>
+            </div>
+            <div class="case-description">
+                <p><strong>2 semanas después:</strong> Esto solo con una sesión, los vellos se ven más debilitados, y hay partes en donde ya no salen.</p>
+                <p><em>* Se recomienda realizar cada sesión cada 4 a 5 semanas. Lo ideal es completar de 8 a 10 sesiones para eliminar definitivamente el vello.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Equipo -->
+    <section id="equipo" class="section-container">
+        <h2 class="section-title">Conoce a Nuestros Especialistas</h2>
+        <div class="grid-2 team-grid">
+            <div class="card">
+                <img src="dra_andrea_gomez.jfif" alt="Dra. Andrea Gómez">
+                <h3>Dra. Andrea Gómez</h3>
+                <p>Especialista en Medicina Estética<br><span>10 años de experiencia</span></p>
+            </div>
+            <div class="card">
+                <img src="dr_carlos_ruiz.jfif" alt="Dr. Carlos Ruiz">
+                <h3>Dr. Carlos Ruiz</h3>
+                <p>Cirujano Estético Certificado<br><span>15 años de experiencia</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section id="reserva" class="reserva-section">
+        <h2 class="section-title">Reserva tu Cita</h2>
+        <p class="text-center">Agenda tu consulta hoy mismo.</p>
+        <!-- Se utiliza formsubmit.co para procesar el envío sin necesidad de backend -->
+        <form class="reserva-form" action="https://formsubmit.co/amateclinicaestetica752@gmail.com" method="POST">
+            <div class="form-group row">
+                <input type="text" name="Nombre" placeholder="Nombre" aria-label="Nombre" required>
+                <input type="tel" name="Teléfono" placeholder="Teléfono" aria-label="Teléfono" required>
+                <input type="email" name="Email" placeholder="Email" aria-label="Email" required>
+            </div>
+            <div class="form-group full">
+                <select name="Tratamiento" required aria-label="Selecciona Tratamiento">
+                    <option value="" disabled selected>Selecciona Tratamiento</option>
+                    <option value="limpieza">Limpieza Facial</option>
+                    <option value="labios">Relleno de Labios</option>
+                    <option value="laser">Depilación Láser</option>
+                </select>
+            </div>
+            <!-- Campo oculto para darle un asunto predeterminado al correo -->
+            <input type="hidden" name="_subject" value="¡Nueva reserva desde la página web!">
+            <button type="submit" class="btn-primary center-btn">Reservar Ahora</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div id="contacto" class="footer-info">
+            <span>📍 Dirección: Dirección de la clínica</span>
+            <span>📞 +502 3054 6370</span>
+            <span>📱 WhatsApp: 987-654-2210</span>
+            <span>✉️ Email: amateclinicaestetica752@gmail.com</span>
+        </div>
+    </footer>
+
+    <!-- Lógica de Javascript para el comparador de imágenes -->
+    <script>
+        const slider = document.querySelector('.slider-input');
+        const beforeWrapper = document.querySelector('.img-before-wrapper');
+        const sliderThumb = document.querySelector('.slider-thumb');
+
+        slider.addEventListener('input', (e) => {
+            // Actualizamos el ancho de la imagen revelada y la posición de la barra
+            const sliderValue = e.target.value;
+            beforeWrapper.style.width = `${sliderValue}%`;
+            sliderThumb.style.left = `${sliderValue}%`;
+        });
+    </script>
+</body>
+</html>
